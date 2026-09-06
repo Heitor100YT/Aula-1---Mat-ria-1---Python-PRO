@@ -1,0 +1,14 @@
+jobs:
+  update-latest:
+    name: Update the latest version bot on BotCity Orchestrator.
+    #  Running the latest version of Ubuntu.
+    runs-on: ubuntu-latest
+    steps:
+      # Checking out the project.
+      - uses: actions/checkout@v4
+      # Implemented executable permission to build.sh
+      - name: Get permission to build.
+        run: chmod +x build.sh
+      # Execute the build script to compile the project
+      - name: Execute to build.
+        run: ./build.sh
