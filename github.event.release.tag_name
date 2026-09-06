@@ -1,0 +1,16 @@
+      - name: Botcity action
+        # Using v1.0.6 version of botcity-action-bots
+        uses: botcity-dev/botcity-action-bots@v1.0.6
+        with:
+          # Use deploy and release functions
+          deploy: true
+          release: true
+          # Use tag_name from GitHub release event
+          version: ${{ github.event.release.tag_name }}
+          botId: 'example'
+          technology: 'python'
+          botPath: './bot.zip'
+        env:
+          LOGIN: ${{ secrets.LOGIN }}
+          SERVER: ${{ secrets.SERVER }}
+          KEY: ${{ secrets.KEY }}
