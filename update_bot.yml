@@ -1,0 +1,6 @@
+name: Update the latest version of the Bot in the Orchestrator.
+
+on:
+  push:
+    branches:
+      - main
