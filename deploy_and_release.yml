@@ -1,0 +1,6 @@
+name: Deploy and Release in from GitHub release
+
+on:
+  # Capturing the release publishing event.
+  release:
+    types: [ published ]
